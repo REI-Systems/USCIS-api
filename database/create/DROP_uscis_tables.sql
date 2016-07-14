@@ -1,0 +1,1 @@
+DROP TABLE appt, usr, user_role_cd, slot_counter, locations
