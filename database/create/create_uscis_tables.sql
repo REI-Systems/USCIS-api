@@ -5,14 +5,14 @@ CREATE TABLE locations(
 );
 
 CREATE TABLE slot_counter(
-	id serial PRIMARY KEY,
-	start_time TIMESTAMP NOT NULL,
-	end_time TIMESTAMP NOT NULL,
+	id INTEGER PRIMARY KEY,
+	start_time VARCHAR(10) NOT NULL,
+	end_time VARCHAR(10) NOT NULL,
 	slot_number INTEGER NOT NULL	
 );
 
 CREATE TABLE user_role_cd (
-	user_role_cd serial PRIMARY KEY,
+	user_role_cd INTEGER PRIMARY KEY,
 	user_role_desc VARCHAR(50) NOT NULL
 );
 
@@ -41,6 +41,7 @@ CREATE TABLE appt (
 	slot_counter INTEGER NOT NULL,
 	location_code VARCHAR (3) NOT NULL,
 	user_id INTEGER NOT NULL,
+	appt_date DATE NOT NULL,
 	CONSTRAINT slot_counter_fkey 
 		FOREIGN KEY (slot_counter)
 		REFERENCES slot_counter (id) MATCH SIMPLE
