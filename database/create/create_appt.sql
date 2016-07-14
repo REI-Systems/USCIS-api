@@ -3,6 +3,7 @@ CREATE TABLE appt (
 	slot_counter INTEGER NOT NULL,
 	location_code VARCHAR (3) NOT NULL,
 	user_id INTEGER NOT NULL,
+	appt_date DATE NOT NULL,
 	CONSTRAINT slot_counter_fkey 
 		FOREIGN KEY (slot_counter)
 		REFERENCES slot_counter (id) MATCH SIMPLE
