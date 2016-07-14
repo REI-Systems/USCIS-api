@@ -9,11 +9,11 @@ CREATE TABLE usr(
 	pwd VARCHAR(50) NOT NULL,
 	location_cd VARCHAR(3) NOT NULL,
 	CONSTRAINT user_role_cd_fkey
-		FOREIGN KEY user_role_cd
+		FOREIGN KEY (user_role_cd)
 		REFERENCES user_role_cd (user_role_cd) MATCH SIMPLE
 		ON UPDATE NO ACTION ON DELETE NO ACTION,
 	CONSTRAINT location_cd
-		FOREIGN KEY location_cd
-		REFERENCES location (location_cd) MATCH SIMPLE
+		FOREIGN KEY (location_cd)
+		REFERENCES locations (location_cd) MATCH SIMPLE
 		ON UPDATE NO ACTION ON DELETE NO ACTION
 );

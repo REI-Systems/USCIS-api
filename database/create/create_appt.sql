@@ -9,7 +9,7 @@ CREATE TABLE appt (
 		ON UPDATE NO ACTION ON DELETE NO ACTION,
 	CONSTRAINT location_code_fkey
 		FOREIGN KEY (location_code)
-		REFERENCES location_code (location_code) MATCH SIMPLE
+		REFERENCES locations (location_cd) MATCH SIMPLE
 		ON UPDATE NO ACTION ON DELETE NO ACTION,
 	CONSTRAINT user_id_fkey
 		FOREIGN KEY (user_id)
