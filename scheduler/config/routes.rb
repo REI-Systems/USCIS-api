@@ -1,9 +1,18 @@
 Rails.application.routes.draw do
+  resources :app_users
+  resources :appointments
+  resources :time_slots
+  # resources :app_users do
+  #   resources :appointments do 
+  #     resources :time_slots
+  #   end
+  # end
+  #devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'user#index'
+  root 'app_users#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
