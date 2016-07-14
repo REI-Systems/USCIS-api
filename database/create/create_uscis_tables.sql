@@ -36,6 +36,7 @@ CREATE TABLE usr(
 		ON UPDATE NO ACTION ON DELETE NO ACTION
 );
 
+
 CREATE TABLE appt (
 	appt_id bigserial PRIMARY KEY,
 	slot_counter INTEGER NOT NULL,
